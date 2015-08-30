@@ -16,7 +16,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.    
 
-# About the simulation
+# About the Simulation
 OpenJones implements the race control theory first described by Jones(doi:10.1115/1.3662587) and later expanded upon by Harris (ISBN 9780849371837 and ISBN 9780849371820). To solve the non-linear systems of this theory it uses solvers integrated with Matlab.
 Variable names in the program do not follow standart conventions of capitalization, but instead are meant to represent Harris' names as best as possible in ASCII.
 
@@ -41,9 +41,9 @@ init_cond=[];
 % run the simulation
 [c,b]=trulla.calcDisplacement(load,'outer',init_cond); 
 ```
-This yields a struct c, which contains a wealth of output information in a human-readable format. The variable names correspond to those used by Harris.
+This yields a struct c, which contains a wealth of internal and external displacement parameters, as well as herzian stress in a human-readable format.
 
 The inputs (geometry, physical and load) are described in detail in the source file.
 
 # Compatibility
-No part of OpenJones was tested with any Matlab-Compatible interpreter, such as Octave. Octave's limited selection of non-linear solvers is likely a problem for convergence in most cases.
+No part of OpenJones was tested with any Matlab-Compatible interpreter, such as Octave. Octave's limited selection of non-linear solvers is likely a problem for convergence in many cases.
