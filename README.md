@@ -25,7 +25,7 @@ OpenJones contains first and foremost a Matlab class called BallBearing, which i
 Several example of existing bearings are included in trullatest, which is meant as a sandbox.
 
 One example from a ball bearing of the Japanese LE-7 Rocket:
-
+```
 %set a ball diameter (because the grove radii are given as a fraction of this)
 D=7.938e-3;
 %crate an instance
@@ -40,7 +40,7 @@ load=[2670,0,0,0,0,50000];
 init_cond=[];
 % run the simulation
 [c,b]=trulla.calcDisplacement(load,'outer',init_cond); 
-
+```
 This yields a struct c, which contains a wealth of output information in a human-readable format. The variable names correspond to those used by Harris.
 
 The inputs (geometry, physical and load) are described in detail in the source file.
