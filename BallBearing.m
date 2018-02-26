@@ -586,7 +586,8 @@ classdef BallBearing < handle
         end
 
         function solvStruct = genSolvStruct(valueVec, geo)
-            valMat = vec2mat(valueVec, geo.z);
+            #valMat = vec2mat(valueVec, geo.z);
+            valMat = reshape(valueVec(1:end-5), geo.z, numel(valueVec(1:end-5))/geo.z)';
             solvStruct = struct(...
                 'X_1', valMat(1,:)'+sind(geo.alpha_free)*(geo.f_o-0.5)*...
                     geo.D*ones(geo.z,1),...
