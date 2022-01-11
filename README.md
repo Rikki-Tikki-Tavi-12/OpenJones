@@ -30,7 +30,7 @@ OpenJones contains first and foremost a Matlab class called BallBearing, which w
 Currently available are simulation modes are: 
 1. calcDisplacement, which calculates the external and internal displacements of a ball bearing given a certain load
 2. calcStiffness, which calculates a numerical derivative of the external displacements in three cartesian directions
-3. 
+
 Several example of existing bearings are included in trullatest, which is meant as a sandbox.
 
 One example from a ball bearing of the Japanese LE-7 Rocket:
