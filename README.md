@@ -17,11 +17,20 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.    
 
 # About the Simulation
-OpenJones implements the race control theory first described by Jones(doi:10.1115/1.3662587) and later expanded upon by Harris (ISBN 9780849371837 and ISBN 9780849371820). To solve the non-linear systems of this theory it uses solvers integrated with Matlab.
+OpenJones implements the race control theory first described by Jones (doi:10.1115/1.3662587) and later expanded upon by Harris (ISBN 9780849371837 and ISBN 9780849371820). To solve the non-linear systems of this theory, it uses solvers integrated with Matlab.
 Variable names in the program do not follow standart conventions of capitalization, but instead are meant to represent Harris' names as best as possible in ASCII.
 
 # Usage
-OpenJones contains first and foremost a Matlab class called BallBearing, which is the meat of the simulation. To use this in a program you need to generate an instance, set the geometrical and other physical properties of your bearing, define a load case and then run the simulation your want. Currenlty available are calcDisplacement, which calculates the external and internal displacements of a ball bearing given a certain load and calcStiffness, which calculates a numerical derivative of the external displacements in three cartesian directions.
+OpenJones contains first and foremost a Matlab class called BallBearing, which which performs the simulation. To use this in a program you need to...
+1. Generate an instance
+2. Det the geometrical and other physical properties of your bearing
+3. define a load case
+4. run the simulation you want
+ 
+Currently available are simulation modes are: 
+1. calcDisplacement, which calculates the external and internal displacements of a ball bearing given a certain load
+2. calcStiffness, which calculates a numerical derivative of the external displacements in three cartesian directions
+3. 
 Several example of existing bearings are included in trullatest, which is meant as a sandbox.
 
 One example from a ball bearing of the Japanese LE-7 Rocket:
@@ -46,4 +55,5 @@ This yields a struct c, which contains a wealth of internal and external displac
 The inputs (geometry, physical and load) are described in detail in the source file.
 
 # Compatibility
-No part of OpenJones was tested with any Matlab-Compatible interpreter, such as Octave. Octave's limited selection of non-linear solvers is likely a problem for convergence in many cases.
+OpenJones supports only Mathworks Matlab as its environment. It can be made to run under Octave with slight modifications, but convergence behavior may be negatively impacted by the inavailablilty of certain solvers.
+To make it run in Octave, the options parameter of the fsolve commands needs to be removed.
