@@ -1,7 +1,7 @@
 # OpenJones
-OpenJones implements a simulation of high speed ball bearings as described by A. Jones and T. Harris (race control theory). Assumes rotating inner race and stationary outer race.
+OpenJones implements a simulation of high speed ball bearings as described by A. Jones and T. Harris (race control theory). It assumes a rotating inner race and stationary outer race.
 
-Copyright (C) 2015 Samuel Sudhof
+Written by Samuel Sudhof in 2015
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
